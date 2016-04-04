@@ -11,9 +11,10 @@
     color: #e90c0c;
     font-family: "Ravie";
     font-size: 36px;
+    font-weight: 100;
     
     margin: 0;
-    padding-bottom: 14px;
+    padding-bottom: 0;
     padding-left: 20px;
     padding-top: 30px;
 }
@@ -46,9 +47,9 @@
 }
 
 #lateral {
-    padding-top: 7px;
     width: 154px;
     
+    box-sizing: border-box;
     position: absolute;
     left: 0;
     top: 0;
@@ -58,8 +59,14 @@
 #lateral > h2 {
     font-size: 48px;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
     transform: rotate(-90deg);
-    position: relative;
+    
+    position: absolute;
+    bottom: 412px; 
+    /* 90px (#recipiente bottom) + 125px (#peixes + padding height) + 197 (#bolhas + padding height) */
+    left: -41px; /* 6px (distance to #lateral border) - 47px */
 }
 
 #destaque {
@@ -72,10 +79,10 @@
     color: #333;
     font-family: "Verdana";
     
-    margin: 0 auto;
     position: relative;
+    height: auto;
+    margin: 0 auto;
     width: 800px;
-    height: 100%;
 }
 
 #rodape {
@@ -87,10 +94,11 @@
 }
 
 #ticket {
+    transition: left 100ms ease-out;
+    
     position: fixed;
     left: -69px; /*  158px (ticket width) - 89px */
     top: 295px;
-    transition: left 100ms ease-out;
 }
 
 #ticket:hover {
@@ -99,26 +107,25 @@
 
 /* TAGs */
 
-html, body {
-    height: 100%;
-}
-
 img[src*="siri"] {
+    position: absolute;
     left: -10px;
-    position: relative;
+    top: 7px;
 }
 
 img[src*="bolhas"] {
     text-align: right;
-    right: -42px; /* 154px (#lateral width) - 62 px (bolhas width) - 20px (distance) */
-    position: relative;
+    padding-bottom: 125px; /* 111px (peixes height) + 14px (peixes padding) */
+    
+    position: absolute;
+    bottom: 0px;
+    right: 20px; /* 154px (#lateral width) - 62 px (bolhas width) - 20px (distance) */
 }
 
 img[src*="peixe"] {
+    position: absolute;
     bottom: 0;
     left: -44px;
-    padding-top: 14px;
-    position: relative;
 }
 
 table {
@@ -128,11 +135,11 @@ table {
 }
 
 td {
+    line-height: 2em;
     min-width: 50px;
     padding: 0 0;
-    line-height: 2em;
 }
 
-td:nth-child(even) {
+td:nth-child(even) { /* select all price cells in table */
     text-align: right;
 }
