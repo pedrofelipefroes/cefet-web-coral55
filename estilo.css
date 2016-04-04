@@ -1,2 +1,138 @@
 /* Importa o arquivo CSS que importa a fonte Ravie */
 @import "fonts/ravie.css";
+
+/* IDs */
+
+#cabecalho {
+    margin-left: 155px; /* 154px + 1px (border) */
+}
+
+#cabecalho > h1 {
+    color: #e90c0c;
+    font-family: "Ravie";
+    font-size: 36px;
+    
+    margin: 0;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+
+#cabecalho > h2 {
+    font-family: "Trebuchet MS";
+    font-size: 24px;
+    font-weight: 100;
+    text-align: right;
+    
+    margin: 0;
+    padding-bottom: 3px;
+    padding-right: 80px;
+}
+
+#cardapio {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid 1px #aac0ae;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 17px;
+    
+    margin-left: 155px; /* 154px + 1px (border) */
+    width: 646px;
+}
+
+#cardapio > h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#lateral {
+    padding-top: 7px;
+    width: 154px;
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+#lateral > h2 {
+    font-size: 48px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    position: relative;
+}
+
+#destaque {
+    color: #d027aa;
+}
+
+#recipiente {
+    background: linear-gradient(#f6f1b2, #4599b2);
+    border: 1px solid #d3d3d3;
+    color: #333;
+    font-family: "Verdana";
+    
+    margin: 0 auto;
+    position: relative;
+    width: 800px;
+    height: 100%;
+}
+
+#rodape {
+    margin-left: 155px; /* 154px + 1px (border) */
+    padding-bottom: 25px;
+    padding-right: 15px;
+    padding-top: 46px;
+    text-align: right;
+}
+
+#ticket {
+    position: fixed;
+    left: -69px; /*  158px (ticket width) - 89px */
+    top: 295px;
+    transition: left 100ms ease-out;
+}
+
+#ticket:hover {
+    left: 0px;
+}
+
+/* TAGs */
+
+html, body {
+    height: 100%;
+}
+
+img[src*="siri"] {
+    left: -10px;
+    position: relative;
+}
+
+img[src*="bolhas"] {
+    text-align: right;
+    right: -42px; /* 154px (#lateral width) - 62 px (bolhas width) - 20px (distance) */
+    position: relative;
+}
+
+img[src*="peixe"] {
+    bottom: 0;
+    left: -44px;
+    padding-top: 14px;
+    position: relative;
+}
+
+table {
+    text-align: left;
+    padding: 0 0;
+    width: 100%;
+}
+
+td {
+    min-width: 50px;
+    padding: 0 0;
+    line-height: 2em;
+}
+
+td:nth-child(even) {
+    text-align: right;
+}
